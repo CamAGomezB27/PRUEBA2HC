@@ -426,6 +426,10 @@ main {
     padding: 20px;
 }
 
+body, main {
+    position: relative;
+}
+
 /* Burbuja lateral */
 .bubble {
     position: fixed; /* Fija al viewport */
@@ -513,6 +517,128 @@ main {
     bottom: 10px; /* Coloca la flecha en la parte inferior */
     width: 100%;
 }
+
+/* Posición del texto "Descargar plantilla" */
+.top-right {
+    position: fixed; /* El cuadro se fija en el lugar especificado */
+    top: 150px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde el borde derecho */
+    display: flex;
+    align-items: center; /* Alineamos el contenido horizontalmente */
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 8px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Asegura que el cuadro no sea tan ancho */
+    width: auto;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    justify-content: flex-start;
+}
+
+.top-right span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    text-align: left;
+}
+
+.excel-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.excel-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Contenedor principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 60px; /* Espacio después del header */
+}
+
+/* Fila de botones e imagen */
+.button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+}
+
+.button-row select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.button-group .btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #265cda;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button-group .btn:hover {
+    background-color: #1b4ca7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-row-image {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Tabla estilo Excel */
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.excel-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.excel-table th,
+.excel-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.excel-table th {
+    background-color: #265cda;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.excel-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 
 /* Estilos adicionales */
 @media (max-width: 768px) {
