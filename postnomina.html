@@ -3,17 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Postnómina</title>
+        <title>POSTNOMINA</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div class="container">
-            <h1>Postnómina</h1>
-            <p>Contenido de la página postnómina.</p>
-            <a href="index.html"><button>Regresar</button></a> <!-- Botón para regresar a la página principal -->
-        </div>
+        <!-- Header fijo en la parte superior -->
+        <header>
+            <div class="header-content">
+                <!-- Logo de usuario -->
+                <div class="logo-container">
+                    <img src="ruta-del-logo.png" alt="Logo Usuario" class="logo">
+                </div>
+                <!-- Barra de navegación -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <!-- Puedes agregar más elementos aquí -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Título de la página -->
+        <main>
+            <h1>POSTNOMINA</h1>
+            <p>Contenido de la página masivas.</p>
+
+        <!-- Botón de chatbot -->
         <button id="chatbot-button">💬</button>
-            <!-- Contenedor del chat -->
+
+        <!-- Contenedor del chat -->
         <div id="chatbot-container">
             <div id="chat-header">
                 <h3>Habla con Franco</h3>
@@ -23,6 +42,7 @@
                 <p>Como te puedo ayudar</p>
             </div>
         </div>
+
         <script src="/js/script.js"></script>
     </body>
 </html>
