@@ -6,24 +6,23 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    display: flex;  /* Usamos flexbox para disposición horizontal */
-    justify-content: space-between; /* Distribuye los elementos */
-    align-items: flex-start; /* Alinea los elementos al inicio (parte superior) */
-    padding: 50px; /* Espacio alrededor de los elementos */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
 }
 
 /* Contenedor principal */
 .container {
-    max-width: 300px;
-    margin: 50px auto;
+    max-width: 400px; /* Aumentamos el ancho máximo del contenedor */
     background: linear-gradient(135deg, #62adf4, #62adf4);
-    padding: 25px;
+    padding: 35px; /* Aumentamos el padding dentro del contenedor */
     border-radius: 25px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     border-top: 8px solid #265cda;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centrado de texto dentro del contenedor */
 }
-
 
 .container:hover {
     transform: translateY(-5px);
@@ -43,11 +42,11 @@ body {
     right: 20px;
     background-color: #265cda;
     color: white;
-    font-size: 25px;
+    font-size: 30px; /* Aumentamos el tamaño de la fuente */
     border: none;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 80px; /* Aumentamos el tamaño del botón */
+    height: 80px; /* Aumentamos el tamaño del botón */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,8 +66,8 @@ body {
     bottom: 80px;
     right: 20px;
     background-color: #fff;
-    width: 310px;
-    height: 185px;
+    width: 350px; /* Aumentamos el ancho del contenedor */
+    height: 250px; /* Aumentamos la altura del contenedor */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: none; /* Oculto por defecto */
@@ -80,11 +79,11 @@ body {
 #chat-header {
     background-color: #265cda;
     color: white;
-    padding: 5px;
+    padding: 10px; /* Aumentamos el padding de la cabecera */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 15px;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
 }
 
 #chat-header h3 {
@@ -95,7 +94,7 @@ body {
     background-color: transparent;
     color: white;
     border: none;
-    font-size: 20px;
+    font-size: 25px; /* Aumentamos el tamaño de la fuente */
     cursor: pointer;
 }
 
@@ -104,7 +103,7 @@ body {
     padding: 15px;
     flex-grow: 1;
     overflow-y: auto;
-    font-size: 15px;
+    font-size: 16px; /* Aumentamos el tamaño de la fuente */
 }
 
 #chat-body p {
@@ -118,7 +117,7 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 26px;
+    font-size: 30px; /* Aumentamos el tamaño de la fuente del título */
     color: white; 
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -130,15 +129,15 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; /* Aumentamos el espacio entre los elementos del formulario */
 }
 
 /* Botón habilitado */
 button {
     background-color: #265cda; 
     color: white;
-    font-size: 16px;
-    padding: 12px;
+    font-size: 18px; /* Aumentamos el tamaño de la fuente de los botones */
+    padding: 15px; /* Aumentamos el padding de los botones */
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -161,16 +160,15 @@ button:focus {
 /* Adaptación para pantallas pequeñas */
 @media (max-width: 600px) {
     .container {
-        padding: 20px;
+        padding: 30px;
         margin: 20px auto;
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 26px;
     }
 
     input, button {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
-
