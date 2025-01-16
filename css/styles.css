@@ -82,51 +82,58 @@ header {
     left: 0;
     width: 100%; /* Ocupa todo el ancho */
     max-width: 100%; /* Evita que se desborde */
-    background: #ecf3fe; 
+    background: #ecf3fe; /* Suavizamos el fondo con un degradado */
     color: rgb(255, 254, 254);
-    padding: 40px 50px; /* Aumentamos el padding para hacer el header más grande */
+    padding: 30px 50px; /* Espaciado más equilibrado */
     z-index: 1000; /* Asegura que el header quede sobre otros elementos */
-    box-shadow: 0 4px 12px rgba(64, 63, 63, 0.2); /* Sombra más suave */
+    box-shadow: 0 4px 15px rgba(64, 63, 63, 0.2); /* Sombra más definida */
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Distribución clara entre logo y navegación */
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar el fondo */
 }
 
 /* Contenido del header */
 .header-content {
     display: flex;
-    justify-content: space-between; /* Para colocar el logo y la navegación a los extremos */
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* Asegura que ocupe todo el espacio disponible */
-    position: relative; /* Necesario para alinear la imagen central */
+    width: 100%; 
+    position: relative; 
 }
 
 /* Estilo para el logo dentro del header */
 header .logo-container {
-    order: 1; /* Coloca el logo al final (lado derecho) */
-    margin-left: auto; /* Alinea a la derecha */
+    order: 1; 
+    margin-left: auto;
     position: relative;
-    z-index: 10; /* Asegura que el logo esté por encima de la imagen central */
+    z-index: 10; 
 }
 
 header .logo-container img {
-    width: 100px; /* Aumentamos el tamaño del logo */
-    height: 100px; /* Aumentamos el tamaño del logo */
-    border-radius: 50%; /* Hacerlo circular */
-    border: 5px solid #202022; /* Borde oscuro alrededor del círculo */
-    background-color: #8891b5; /* Fondo del logo */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 60px; /* Tamaño equilibrado del logo */
+    height: 60px; 
+    border-radius: 50%; 
+    border: 4px solid #000000; /* Bordes con el color base */
+    background-color: #fcfcfc;
+    padding: 5px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de animación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra alrededor del logo */
+    cursor: pointer; /* Cambia a una mano para indicar que es interactivo */
+}
+
+header .logo-container img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el ratón */
+    border-color: #89a3e2; /* Cambio de color en el borde */
 }
 
 /* Estilo para la navegación */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Aumentamos el espacio entre los elementos */
+    gap: 30px; 
     margin: 0;
     padding: 0;
 }
@@ -136,39 +143,30 @@ nav ul li a {
     text-decoration: none;
     color: rgb(28, 14, 235);
     font-weight: bold;
-    font-size: 18px; /* Aumentamos el tamaño de fuente */
-    transition: color 0.3s ease;
-    white-space: nowrap; /* Asegura que el texto no se desborde */
+    font-size: 18px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
-    color: #416cc9; /* Cambio de color al pasar el ratón */
-}
-
-nav ul li a:active {
-    transform: translateY(2px); /* Efecto de deslizamiento hacia abajo */
+    color: #416cc9; 
+    text-shadow: 0 2px 8px rgba(65, 108, 201, 0.6); /* Efecto de brillo al pasar el ratón */
 }
 
 /* Estilo para la imagen central del header */
 header::before {
-    content: ""; /* Crea el pseudo-elemento */
+    content: ""; 
     position: absolute;
-    top: 50%; /* Centrado vertical */
-    left: 50%; /* Centrado horizontal */
-    transform: translate(-50%, -50%); /* Alineación perfecta */
-    width: 200px; /* Ajusta el tamaño de la imagen */
-    height: 200px; /* Ajusta el tamaño de la imagen */
-    background-image: url('/assets/Franco_Okay\ 1.png'); /* Ruta de la imagen central */
-    background-size: cover; /* Asegura que la imagen cubra todo el área */
-    background-position: center; /* Centra la imagen */
-    border-radius: 50%; /* Hacer la imagen circular */
-    z-index: 1; /* Coloca la imagen detrás de otros elementos */
-}
-
-/* Estilo para el main */
-main {
-    margin-top: 120px; /* Deja espacio para que no se cubra por el header */
-    padding: 20px;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 380px; 
+    height: 250px; 
+    background-image: url('/assets/CasaColaborador.png'); 
+    background-size: contain; 
+    background-position: center; 
+    z-index: 1; 
+    opacity: 0.9; /* Suaviza la imagen central */
 }
 
 button {
@@ -422,43 +420,98 @@ input:focus, textarea:focus {
     }
 }
 
-/* Barra lateral */
-.barra-lateral {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 60px; /* Inicialmente pequeña */
-    height: 100%;
-    background-color: #3e4a61; /* Color de la barra */
+/* Estilo para el main */
+main {
+    margin-top: 120px; /* Deja espacio para que no se cubra por el header */
+    padding: 20px;
+}
+
+/* Burbuja lateral */
+.bubble {
+    position: fixed; /* Fija al viewport */
+    left: -15px; /* Hace que la burbuja esté pegada al borde izquierdo */
+    top: 200px; /* Debajo del header, ajustado */
+    width: 180px; /* Ancho mayor para que quede más ovalada */
+    height: 200px; /* Alto para hacerla más ovalada */
+    background-color: #416cc9; /* Color de fondo */
+    color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; /* Pone los botones uno encima del otro */
+    justify-content: space-between; /* Espacio uniforme entre los botones */
     align-items: center;
-    transition: width 0.3s ease; /* Transición suave */
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
-}
-
-.barra-lateral.expandida {
-    width: 200px; /* Tamaño cuando está expandida */
-}
-
-.barra-lateral button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    margin: 20px 0;
+    border-radius: 60px; /* Hace la burbuja más ovalada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
     cursor: pointer;
-    transition: transform 0.3s ease; /* Animación al pasar el ratón */
+    transition: transform 0.3s ease, background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
-.barra-lateral button:hover {
-    transform: scale(1.2); /* Efecto de aumento de tamaño */
+/* Estilo para los botones dentro de la burbuja */
+.bubble button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%; /* Hace que los botones ocupen todo el ancho de la burbuja */
+    height: 45%; /* Hace que los botones ocupen el 45% de la altura de la burbuja */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
+    transition: background-color 0.3s ease;
+    text-align: center; /* Centra el texto dentro del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Estilos para los iconos */
-.icono-casa, .icono-flecha {
-    font-size: 30px;
+/* Efecto al pasar el ratón sobre los botones */
+.bubble button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover para los botones */
+}
+
+/* Íconos dentro de los botones */
+.bubble button i {
+    font-size: 20px; /* Tamaño de los íconos */
+}
+
+/* Recorte para simular que está pegada al borde */
+.bubble::before {
+    content: ""; 
+    position: absolute;
+    left: -15px; /* Recorte en el borde izquierdo */
+    top: 50%;
+    transform: translateY(-50%); /* Centra el recorte verticalmente */
+    width: 15px;
+    height: 15px;
+    background-color: #416cc9; /* Igual al color de la burbuja */
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambios cuando la burbuja está contraída (sólo se ven los íconos) */
+.bubble.collapsed {
+    width: 50px; /* Solo 50px visible, mostrando solo los iconos */
+    height: 50px;
+    border-radius: 50%; /* Hace la burbuja completamente redonda */
+}
+
+/* Alineación de los íconos cuando la burbuja está contraída */
+.bubble.collapsed button i {
+    margin: 0; /* Elimina márgenes para que los íconos estén alineados al borde */
+    font-size: 25px; /* Ajusta el tamaño de los íconos */
+}
+
+/* Cambiar dirección de la flecha cuando la burbuja está contraída */
+.bubble.collapsed #toggleIcon {
+    transform: rotate(180deg); /* Rota la flecha */
+}
+
+/* Estilo para los botones cuando están en estado "expandido" */
+.bubble button#toggleBubble {
+    position: absolute;
+    bottom: 10px; /* Coloca la flecha en la parte inferior */
+    width: 100%;
 }
 
 /* Estilos adicionales */
