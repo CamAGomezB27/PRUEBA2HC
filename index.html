@@ -6,7 +6,7 @@
         <title>PRUEBA</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
-    <body>
+    <body class="pagina-principal">
         <div class="main-container">
             <!-- Imagen a la izquierda -->
             <div class="image-container">
@@ -24,15 +24,21 @@
             </div>
         </div>
 
-        <button id="chatbot-button">💬</button>
-        <!-- Contenedor del chat -->
+        <div id="chatbot-button">
+            <span>💬</span> <!-- O el ícono que prefieras -->
+        </div>
+        
         <div id="chatbot-container">
             <div id="chat-header">
-                <h3>Habla con Franco</h3>
+                <div class="logo-container">
+                    <img src="/assets/Franco_Pensando 1.png" alt="Logo">
+                </div>
+                <h3>Franco</h3>
                 <button id="close-chat">X</button>
             </div>
             <div id="chat-body">
-                <p>Como te puedo ayudar</p>
+                <p class="bot">Hola, ¿en qué puedo ayudarte?</p>
+                <p class="user">Tengo una pregunta sobre los productos.</p>
             </div>
         </div>
 
