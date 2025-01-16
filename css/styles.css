@@ -35,6 +35,37 @@ body:not(.main-page) {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Contenedor principal de la página */
+.main-container {
+    display: flex; /* Usamos Flexbox para que los elementos estén uno al lado del otro */
+    justify-content: center; /* Alineamos horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    height: 100vh; /* Hace que ocupe todo el alto de la pantalla */
+    gap: 20px; /* Espacio entre la imagen y el formulario */
+}
+
+/* Estilos para el contenedor de la imagen */
+.image-container {
+    position: fixed; /* Hace que la imagen esté fija en la página */
+    top: 50%; /* Centra verticalmente la imagen */
+    left: 0; /* La coloca en el borde izquierdo */
+    transform: translateY(-50%); /* Ajuste para centrar la imagen verticalmente */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente dentro del contenedor */
+    align-items: center; /* Alinea la imagen verticalmente */
+    width: 600px; /* Ajustamos el tamaño fijo del contenedor */
+    height: auto; /* Ajustamos el tamaño fijo del contenedor */
+    overflow: hidden; /* Evita que la imagen se desborde */
+    border-radius: 10px; /* Opcional, si deseas bordes redondeados */
+}
+
+/* Estilo para la imagen */
+.franco-image {
+    width: 800px; /* Ajusta el tamaño de la imagen (puedes cambiar este valor) */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+}
+
 /* Aseguramos que el contenedor del botón no rompa la línea */
 .btn-container {
     display: inline-flex;
@@ -224,42 +255,103 @@ form {
 }
 
 /* Botón habilitado */
-button {
-    background-color: #265cda; 
-    color: white;
-    font-size: 18px; /* Aumentamos el tamaño de la fuente de los botones */
-    padding: 15px; /* Aumentamos el padding de los botones */
-    border: none;
-    border-radius: 8px;
+button:enabled {
     cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    opacity: 1; /* El botón tiene plena opacidad cuando está habilitado */
 }
 
-button:hover {
-    background-color: #265cda; 
-    transform: scale(1.05);
+/* Botón deshabilitado */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; /* El botón tiene opacidad reducida cuando está deshabilitado */
 }
 
-button:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 102, 204, 0.6);
+/* Estilo para los inputs */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
 }
 
-/* Adaptación para pantallas pequeñas */
-@media (max-width: 600px) {
+input:focus, textarea:focus {
+    border-color: #265cda; /* Cambia el color del borde al hacer foco */
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+/* Estilo para el chat cuando está abierto */
+#chatbot-container.show {
+    display: flex;
+}
+
+/* Animación para la aparición del chat */
+#chatbot-container.show {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Animación de entrada del chat */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilo de los mensajes */
+#chat-body p.user {
+    background-color: #265cda;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    max-width: 80%;
+    margin-bottom: 10px;
+    align-self: flex-end; /* Los mensajes del usuario se alinean a la derecha */
+}
+
+#chat-body p.bot {
+    background-color: #f1f1f1;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 20px;
+    max-width: 80%;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Los mensajes del bot se alinean a la izquierda */
+}
+
+/* Estilo para los mensajes enviados */
+#chat-body p {
+    word-wrap: break-word;
+}
+
+/* Estilos adicionales */
+@media (max-width: 768px) {
     .container {
-        padding: 30px;
-        margin: 20px auto;
+        width: 90%; /* Hacemos el contenedor más pequeño en pantallas pequeñas */
+        padding: 20px;
     }
 
-    h1 {
-        font-size: 26px;
+    #chatbot-button {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
     }
 
-    input, button {
-        font-size: 16px;
+    #chatbot-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    #chat-header h3 {
+        font-size: 16px; /* Ajustamos el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    #chat-body {
+        font-size: 14px; /* Ajustamos el tamaño de la fuente en pantallas pequeñas */
     }
 }
