@@ -82,54 +82,61 @@ header {
     left: 0;
     width: 100%; /* Ocupa todo el ancho */
     max-width: 100%; /* Evita que se desborde */
-    background: #ecf3fe; /* Fondo igual al contenedor principal */
+    background: #ecf3fe; 
     color: rgb(255, 254, 254);
-    padding: 15px 20px;
+    padding: 40px 50px; /* Aumentamos el padding para hacer el header más grande */
     z-index: 1000; /* Asegura que el header quede sobre otros elementos */
-    box-shadow: 0 4px 12px rgb(64, 63, 63); /* Sombra sutil */
+    box-shadow: 0 4px 12px rgba(64, 63, 63, 0.2); /* Sombra más suave */
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Contenido del header */
 .header-content {
     display: flex;
     justify-content: space-between; /* Para colocar el logo y la navegación a los extremos */
     align-items: center;
     width: 100%; /* Asegura que ocupe todo el espacio disponible */
+    position: relative; /* Necesario para alinear la imagen central */
 }
 
 /* Estilo para el logo dentro del header */
+header .logo-container {
+    order: 1; /* Coloca el logo al final (lado derecho) */
+    margin-left: auto; /* Alinea a la derecha */
+    position: relative;
+    z-index: 10; /* Asegura que el logo esté por encima de la imagen central */
+}
+
 header .logo-container img {
-    width: 50px; /* Ajusta el tamaño del logo */
-    height: 50px;
-    border-radius: 50%; /* Si deseas un logo circular */
-    width: 60px; /* Tamaño del círculo */
-    height: 60px; /* Tamaño del círculo */
+    width: 100px; /* Aumentamos el tamaño del logo */
+    height: 100px; /* Aumentamos el tamaño del logo */
     border-radius: 50%; /* Hacerlo circular */
-    border: 3px solid #000d83; /* Borde oscuro alrededor del círculo */
+    border: 5px solid #202022; /* Borde oscuro alrededor del círculo */
+    background-color: #8891b5; /* Fondo del logo */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
+/* Estilo para la navegación */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Aumentamos el espacio entre los elementos */
     margin: 0;
     padding: 0;
 }
 
+/* Estilo para los enlaces en la navegación */
 nav ul li a {
     text-decoration: none;
     color: rgb(28, 14, 235);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px; /* Aumentamos el tamaño de fuente */
     transition: color 0.3s ease;
     white-space: nowrap; /* Asegura que el texto no se desborde */
 }
@@ -140,6 +147,22 @@ nav ul li a:hover {
 
 nav ul li a:active {
     transform: translateY(2px); /* Efecto de deslizamiento hacia abajo */
+}
+
+/* Estilo para la imagen central del header */
+header::before {
+    content: ""; /* Crea el pseudo-elemento */
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Alineación perfecta */
+    width: 200px; /* Ajusta el tamaño de la imagen */
+    height: 200px; /* Ajusta el tamaño de la imagen */
+    background-image: url('/assets/Franco_Okay\ 1.png'); /* Ruta de la imagen central */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
+    border-radius: 50%; /* Hacer la imagen circular */
+    z-index: 1; /* Coloca la imagen detrás de otros elementos */
 }
 
 /* Estilo para el main */
@@ -397,6 +420,45 @@ input:focus, textarea:focus {
     to {
         transform: translateX(0);
     }
+}
+
+/* Barra lateral */
+.barra-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px; /* Inicialmente pequeña */
+    height: 100%;
+    background-color: #3e4a61; /* Color de la barra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.3s ease; /* Transición suave */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+}
+
+.barra-lateral.expandida {
+    width: 200px; /* Tamaño cuando está expandida */
+}
+
+.barra-lateral button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Animación al pasar el ratón */
+}
+
+.barra-lateral button:hover {
+    transform: scale(1.2); /* Efecto de aumento de tamaño */
+}
+
+/* Estilos para los iconos */
+.icono-casa, .icono-flecha {
+    font-size: 30px;
 }
 
 /* Estilos adicionales */

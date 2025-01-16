@@ -2,16 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatbotButton = document.getElementById('chatbot-button');
     const chatbotContainer = document.getElementById('chatbot-container');
     const closeChatButton = document.getElementById('close-chat');
-    
-    // Desactivar los botones si existen
-    const ButtonMasivas = document.getElementById('BtnMasivas');
-    if (ButtonMasivas) ButtonMasivas.disabled = false;
-
-    const ButtonPersonales = document.getElementById('BtnPersonales');
-    if (ButtonPersonales) ButtonPersonales.disabled = false;
-
-    const ButtonPostnomina = document.getElementById('BtnPostnomina');
-    if (ButtonPostnomina) ButtonPostnomina.disabled = false;
+    const ButtonMasivas = document.getElementById('ButtonMasivas');  // Asegúrate de que el ID sea correcto
+    const ButtonPersonales = document.getElementById('ButtonPersonales');  // Asegúrate de que el ID sea correcto
+    const ButtonPostnomina = document.getElementById('ButtonPostnomina');  // Asegúrate de que el ID sea correcto
 
     // Abrir el chat cuando se presiona el botón
     chatbotButton.addEventListener('click', () => {
