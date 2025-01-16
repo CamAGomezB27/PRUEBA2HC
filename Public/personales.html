@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POSTNOMINA</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>PERSONALES</title>
+    <link rel="stylesheet" href="/Public/css/styles.css">
     <!-- Agregar CDN de Font Awesome para usar íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -14,15 +14,9 @@
             <div class="header-content">    
                 <!-- Logo de usuario -->
                 <div class="logo-container">
-                    <img src="/assets/user.png" alt="Logo">
+                    <img src="/Public/assets/user.png" alt="Logo">
                 </div>
             </header>
-
-             <!-- Descargar plantilla -->
-        <div class="top-right">
-            <span>Si desea descargar la plantilla para elaborar su archivo plano haga clic aqui: </span>
-            <img src="/assets/excel.png" alt="Excel" class="excel-icon">
-        </div>
 
         <!-- Título de la página -->
         <main>
@@ -37,8 +31,15 @@
 
             <!-- Contenido principal -->
             <div class="content">
-                <div class="imgPST">
-                    <img src="/assets/Franco_Okay 1.png" alt="Imagen descriptiva" class="imgPST-image">
+                <!-- Lista desplegable con botones -->
+                <!-- Lista desplegable, botones y nueva imagen -->
+                <div class="button-row">
+                    <select name="options" id="options">
+                        <option value="1">Opción 1</option>
+                        <option value="2">Opción 2</option>
+                        <option value="3">Opción 3</option>
+                    </select>
+                    <img src="/Public/assets/Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
                 </div>
 
                 <!-- Tabla tipo Excel -->
@@ -52,20 +53,6 @@
                                 <th>Encabezado 4</th>
                                 <th>Encabezado 5</th>
                                 <th>Encabezado 6</th>
-                                <th>Encabezado 7</th>
-                                <th>Encabezado 8</th>
-                                <th>Encabezado 9</th>
-                                <th>Encabezado 10</th>
-                                <th>Encabezado 11</th>
-                                <th>Encabezado 12</th>
-                                <th>Encabezado 13</th>
-                                <th>Encabezado 14</th>
-                                <th>Encabezado 15</th>
-                                <th>Encabezado 16</th>
-                                <th>Encabezado 17</th>
-                                <th>Encabezado 18</th>
-                                <th>Encabezado 19</th>
-                                <th>Encabezado 20</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,9 +62,11 @@
                 </div>
 
                 <!-- Botón debajo de la tabla -->
-                <button class="btn submit-btn">Subir</button>
+                <button class="btn submit-btn">Guardar y Enviar</button>
+                <button class="btn">Subir Soporte pdf</button>
             </div>
 
+        </main>
 
         </main>
 
@@ -88,7 +77,7 @@
         <div id="chatbot-container">
             <div id="chat-header">
                 <div class="logo-container">
-                    <img src="/assets/Franco_Pensando 1.png" alt="Logo">
+                    <img src="/Public/assets/Franco_Pensando 1.png" alt="Logo">
                 </div>
                 <h3>Franco</h3>
                 <button id="close-chat">X</button>
@@ -99,6 +88,6 @@
             </div>
         </div>
 
-        <script src="/js/script.js"></script>
+        <script src="/Public/js/script.js"></script>
     </body>
 </html>

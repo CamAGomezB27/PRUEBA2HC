@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERSONALES</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>MASIVAS</title>
+    <link rel="stylesheet" href="/Public/css/styles.css">
     <!-- Agregar CDN de Font Awesome para usar íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -14,12 +14,19 @@
             <div class="header-content">    
                 <!-- Logo de usuario -->
                 <div class="logo-container">
-                    <img src="/assets/user.png" alt="Logo">
+                    <img src="/Public/assets/user.png" alt="Logo">
                 </div>
             </header>
 
+                 <!-- Descargar plantilla -->
+        <div class="top-right">
+            <span>Si desea descargar la plantilla para elaborar su archivo plano haga clic aqui: </span>
+            <img src="/Public/assets/excel.png" alt="Excel" class="excel-icon">
+        </div>
+
         <!-- Título de la página -->
         <main>
+            <!-- Burbuja lateral -->
             <div class="bubble" id="chatBubble">
                 <button id="goHomeButton">
                     <i class="fas fa-home"></i> INICIO
@@ -28,6 +35,7 @@
                     <i id="toggleIcon" class="fas fa-chevron-left"></i> <!-- Flecha inicial apuntando hacia la izquierda -->
                 </button>
             </div>
+
 
             <!-- Contenido principal -->
             <div class="content">
@@ -39,7 +47,9 @@
                         <option value="2">Opción 2</option>
                         <option value="3">Opción 3</option>
                     </select>
-                    <img src="/assets/Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
+                    <button class="btn">Botón 1</button>
+                    <button class="btn">Botón 2</button>
+                    <img src="/Public/assets/Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
                 </div>
 
                 <!-- Tabla tipo Excel -->
@@ -57,16 +67,17 @@
                         </thead>
                         <tbody>
                             <tr><td>Fila 1</td><td>Fila 1</td><td>Fila 1</td><td>Fila 1</td><td>Fila 1</td><td>Fila 1</td></tr>
+                            <tr><td>Fila 2</td><td>Fila 2</td><td>Fila 2</td><td>Fila 2</td><td>Fila 2</td><td>Fila 2</td></tr>
+                            <tr><td>Fila 3</td><td>Fila 3</td><td>Fila 3</td><td>Fila 3</td><td>Fila 3</td><td>Fila 3</td></tr>
+                            <tr><td>Fila 4</td><td>Fila 4</td><td>Fila 4</td><td>Fila 4</td><td>Fila 4</td><td>Fila 4</td></tr>
+                            <tr><td>Fila 5</td><td>Fila 5</td><td>Fila 5</td><td>Fila 5</td><td>Fila 5</td><td>Fila 5</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <!-- Botón debajo de la tabla -->
-                <button class="btn submit-btn">Guardar y Enviar</button>
-                <button class="btn">Subir Soporte pdf</button>
+                <button class="btn submit-btn">Enviar</button>
             </div>
-
-        </main>
 
         </main>
 
@@ -77,7 +88,7 @@
         <div id="chatbot-container">
             <div id="chat-header">
                 <div class="logo-container">
-                    <img src="/assets/Franco_Pensando 1.png" alt="Logo">
+                    <img src="/Public/assets/Franco_Pensando 1.png" alt="Logo">
                 </div>
                 <h3>Franco</h3>
                 <button id="close-chat">X</button>
@@ -88,6 +99,6 @@
             </div>
         </div>
 
-        <script src="/js/script.js"></script>
+        <script src="/Public/js/script.js"></script>
     </body>
 </html>

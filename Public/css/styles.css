@@ -21,16 +21,16 @@ body:not(.pagina-principal) {
     color: black; /* Texto en negro en otras páginas */
 }
 
-/* Contenedor principal */
+/* Formulario y contenedor */
 .container {
-    max-width: 400px; /* Aumentamos el ancho máximo del contenedor */
+    max-width: 400px;
     background: linear-gradient(135deg, #62adf4, #62adf4);
-    padding: 35px; /* Aumentamos el padding dentro del contenedor */
+    padding: 35px;
     border-radius: 25px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     border-top: 8px solid #265cda;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; /* Centrado de texto dentro del contenedor */
+    text-align: center;
 }
 
 .container:hover {
@@ -47,32 +47,36 @@ body:not(.pagina-principal) {
     gap: 20px; /* Espacio entre la imagen y el formulario */
 }
 
-/* Estilos para el contenedor de la imagen */
+/* Contenedor para la imagen, ajustamos la posición */
 .image-container {
-    position: fixed; /* Hace que la imagen esté fija en la página */
-    top: 50%; /* Centra verticalmente la imagen */
-    left: 0; /* La coloca en el borde izquierdo */
-    transform: translateY(-50%); /* Ajuste para centrar la imagen verticalmente */
+    position: absolute; /* Cambiado de fixed a absolute */
+    top: 50%; /* Centra la imagen verticalmente */
+    right: 90%; /* La coloca a la izquierda */
+    transform: translateY(-50%); /* Ajuste para centrar la imagen */
     display: flex;
     justify-content: center; /* Centra la imagen horizontalmente dentro del contenedor */
-    align-items: center; /* Alinea la imagen verticalmente */
-    width: 600px; /* Ajustamos el tamaño fijo del contenedor */
-    height: auto; /* Ajustamos el tamaño fijo del contenedor */
-    overflow: hidden; /* Evita que la imagen se desborde */
-    border-radius: 10px; /* Opcional, si deseas bordes redondeados */
-}
-
-/* Estilo para la imagen */
-.franco-image {
-    width: 800px; /* Ajusta el tamaño de la imagen (puedes cambiar este valor) */
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Asegura que la imagen no se deforme */
-}
-
-/* Aseguramos que el contenedor del botón no rompa la línea */
-.btn-container {
-    display: inline-flex;
     align-items: center;
+    width: 800px; /* Ajustamos el tamaño fijo del contenedor */
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+}
+
+/* Ajustamos la imagen para que no tome más espacio del necesario */
+.franco-image {
+    width: 100%; /* Hace que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+/* Contenedor principal con flexbox */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    position: relative; /* Necesario para la imagen absoluta */
 }
 
 /* Estilo para el header */
@@ -162,7 +166,7 @@ header::before {
     transform: translate(-50%, -50%); 
     width: 380px; 
     height: 250px; 
-    background-image: url('/assets/CasaColaborador.png'); 
+    background-image: url('/Public/assets/CasaColaborador.png'); 
     background-size: contain; 
     background-position: center; 
     z-index: 1; 
