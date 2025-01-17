@@ -38,17 +38,26 @@
 
 
             <!-- Contenido principal -->
-            <div class="content">
-                <!-- Lista desplegable con botones -->
-                <!-- Lista desplegable, botones y nueva imagen -->
-                <div class="button-row">
-                    <select name="options" id="options">
-                        <option value="1">Novedad 1</option>
-                        <option value="2">Novedad 2</option>
-                        <option value="3">Novedad 3</option>
-                    </select>
-                    <button class="btn">Elegir Archivo</button>
-                    <button class="btn">Cargar</button>
+                <div class="content">
+                    <!-- Lista desplegable con botones -->
+                    <div class="button-row">
+                        <div class="button-group">
+                            <div class="select-wrapper">
+                                <select name="options" id="options">
+                                    <option value="" selected disabled>SELECCIONE SU NOVEDAD</option>
+                                    <option value="1">3055 - SEGURO AUTOMOVIL</option>
+                                    <option value="2">3322 - SEGURO SOAT</option>
+                                    <option value="3">3107 - OTRAS DEDUCCIONES</option>
+                                </select>
+                            </div>
+                            <button class="btn">Elegir Archivo</button>
+                            <button class="btn">Cargar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Imagen fuera del div de los botones -->
+                <div class="image-container">
                     <img src="Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
                 </div>
 
@@ -73,11 +82,12 @@
                             <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
                         </tbody>
                     </table>
+                    
                 </div>
 
-                <!-- Botón debajo de la tabla -->
-                <button class="btn submit-btn">Enviar</button>
-            </div>
+                <div class="button-container">
+                    <button class="btn submit-btn">Enviar</button>
+                </div>
 
         </main>
 

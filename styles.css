@@ -582,7 +582,7 @@ body, main {
     margin-top: 60px; /* Espacio después del header */
 }
 
-/* Fila de botones e imagen */
+/* Fila de botones */
 .button-row {
     display: flex;
     align-items: center;
@@ -593,12 +593,26 @@ body, main {
     padding: 15px;
 }
 
-.button-row select {
+.button-group {
+    position: relative; /* Habilita la posición absoluta para el cuadro */
+    display: flex; /* Asegura que los botones y el select estén alineados correctamente */
+    align-items: center;
+    gap: 25px; /* Espacio entre la lista desplegable y los botones */
+}
+
+.select-wrapper {
+    position: relative;
+    display: inline-block; /* Asegura que los elementos se alineen correctamente */
+}
+
+.select-wrapper select {
     padding: 8px 12px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 14px;
+    width: 100%; /* Asegura un buen ajuste */
 }
+
 
 .button-group .btn {
     padding: 10px 20px;
@@ -615,14 +629,6 @@ body, main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.button-row-image {
-    width: 150px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
 /* Tabla estilo Excel */
 .table-container {
     overflow-x: auto;
@@ -632,6 +638,7 @@ body, main {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Espacio entre la tabla y los botones */
 }
 
 .excel-table {
@@ -655,6 +662,31 @@ body, main {
 
 .excel-table tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+
+/* Estilo del botón */
+.btn.submit-btn {
+    padding: 10px 20px;
+    background-color: #265cda;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn.submit-btn:hover {
+    background-color: #1b4ca7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor del botón */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el botón */
+    margin-top: 20px; /* Añade espacio por encima del botón */
 }
 
 
