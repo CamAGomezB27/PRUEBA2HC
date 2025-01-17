@@ -757,6 +757,80 @@ body, main {
     transform: translateY(-2px);
 }
 
+/* Estilo de la imagen */
+.imgPST {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio entre la imagen y la tabla */
+}
+
+.imgPST-image {
+    max-width: 20%; /* Hace que la imagen se ajuste al ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Evita que la imagen tenga espacios debajo */
+}
+
+/* Contenedor con scroll lateral */
+.table-scroll-container {
+    width: calc(100% - 20px); /* 100% del ancho de la página menos los 10px a cada lado */
+    overflow-x: auto; /* Habilita el scroll horizontal si es necesario */
+    margin: 20px auto; /* Centra el contenedor en la página */
+    padding: 0 10px; /* Espacio de 10px a cada lado para no pegarse a los bordes */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+    background-color: #ecf3fe;
+}
+
+/* Contenedor de la tabla */
+.table-containerPST {
+    width: 1200%; /* La tabla ocupará el 100% del ancho disponible dentro de su contenedor */
+    max-width: 1300px; /* Limita el ancho máximo de la tabla */
+    margin: 0 auto; /* Centra la tabla dentro de su contenedor */
+    padding: 2px; /* Agrega un poco de espacio alrededor del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+    background-color: #f9f9f9; /* Fondo gris suave para el contenedor */
+    border-radius: 10px; /* Bordes redondeados para el contenedor */
+}
+
+/* Estilos de la tabla */
+.excel-tablePST {
+    width: 100%; /* La tabla ocupará el 100% del ancho disponible dentro de su contenedor */
+    border-collapse: collapse; /* Elimina los espacios entre las celdas */
+    font-family: 'Arial', sans-serif; /* Usa una fuente limpia y moderna */
+    font-size: 14px; /* Tamaño de fuente moderado */
+    color: #333; /* Color de texto oscuro para una buena legibilidad */
+}
+
+/* Estilo para las celdas */
+.excel-tablePST th, .excel-tablePST td {
+    padding: 12px; /* Espaciado dentro de las celdas */
+    border: 1px solid #ddd; /* Borde suave y ligero entre las celdas */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Estilo de los encabezados */
+.excel-tablePST th {
+    background-color: #4e73df; /* Fondo azul suave para los encabezados */
+    color: white; /* Texto blanco para los encabezados */
+    font-weight: bold; /* Aumenta el grosor del texto */
+    text-transform: uppercase; /* Convierte los encabezados a mayúsculas */
+}
+
+/* Estilo de las filas */
+.excel-tablePST tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo gris muy suave para las filas pares */
+}
+
+.excel-tablePST tr:nth-child(odd) {
+    background-color: #ffffff; /* Fondo blanco para las filas impares */
+}
+
+/* Estilo de la tabla completa */
+.excel-tablePST {
+    border-radius: 8px; /* Bordes redondeados para la tabla */
+    overflow: hidden; /* Evita que los bordes redondeados se vean cortados */
+}
+
+
 
 /* Estilos adicionales */
 @media (max-width: 768px) {
