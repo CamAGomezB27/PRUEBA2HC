@@ -26,41 +26,31 @@
 
         <!-- Título de la página -->
         <main>
-            <!-- Burbuja lateral -->
-            <div class="bubble" id="chatBubble">
-                <button id="goHomeButton">
-                    <i class="fas fa-home"></i> INICIO
-                </button>
-                <button id="toggleBubble">
-                    <i id="toggleIcon" class="fas fa-chevron-left"></i> <!-- Flecha inicial apuntando hacia la izquierda -->
-                </button>
+            <div class="return-button">
+                <i class="fas fa-home"></i> <!-- Ícono de la casa -->
             </div>
 
-
             <!-- Contenido principal -->
-                <div class="content">
-                    <!-- Lista desplegable con botones -->
-                    <div class="button-row">
-                        <div class="button-group">
-                            <div class="select-wrapper">
-                                <select name="options" id="options">
-                                    <option value="" selected disabled>SELECCIONE SU NOVEDAD</option>
-                                    <option value="1">3055 - SEGURO AUTOMOVIL</option>
-                                    <option value="2">3322 - SEGURO SOAT</option>
-                                    <option value="3">3107 - OTRAS DEDUCCIONES</option>
-                                </select>
-                            </div>
-                            <button class="btn">Elegir Archivo</button>
-                            <button class="btn">Cargar</button>
+            <div class="content">
+                <!-- Lista desplegable con botones e imagen -->
+                <div class="button-row">
+                    <div class="button-group">
+                        <div class="select-wrapper">
+                            <select name="options" id="options">
+                                <option value="" selected disabled>SELECCIONE SU NOVEDAD</option>
+                                <option value="1">3055 - SEGURO AUTOMOVIL</option>
+                                <option value="2">3322 - SEGURO SOAT</option>
+                                <option value="3">3107 - OTRAS DEDUCCIONES</option>
+                            </select>
                         </div>
+                        <button class="btn">Elegir Archivo</button>
+                        <button class="btn">Cargar</button>
                     </div>
-                </div>
-                
-                <!-- Imagen fuera del div de los botones -->
-                <div class="image-container">
+                    <!-- Imagen al lado del botón "Cargar" -->
                     <img src="Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
                 </div>
-
+            </div>
+                
                 <!-- Tabla tipo Excel -->
                 <div class="table-container">
                     <table class="excel-table">
@@ -82,7 +72,6 @@
                             <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
                         </tbody>
                     </table>
-                    
                 </div>
 
                 <div class="button-container">

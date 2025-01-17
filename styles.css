@@ -448,93 +448,51 @@ body, main {
     position: relative;
 }
 
-/* Burbuja lateral */
-.bubble {
-    position: fixed; /* Fija al viewport */
-    left: -15px; /* Hace que la burbuja esté pegada al borde izquierdo */
-    top: 200px; /* Debajo del header, ajustado */
-    width: 180px; /* Ancho mayor para que quede más ovalada */
-    height: 200px; /* Alto para hacerla más ovalada */
+/* Estilo general del botón pegado al borde */
+.return-button {
+    position: fixed;
+    left: -15px; /* Pegado al borde izquierdo */
+    top: 200px; /* Ajusta esta posición según lo necesites */
+    width: 60px; /* Tamaño del botón */
+    height: 60px; /* Tamaño del botón */
     background-color: #416cc9; /* Color de fondo */
-    color: #fff;
+    color: #fff; /* Color del ícono */
     display: flex;
-    flex-direction: column; /* Pone los botones uno encima del otro */
-    justify-content: space-between; /* Espacio uniforme entre los botones */
-    align-items: center;
-    border-radius: 60px; /* Hace la burbuja más ovalada */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    align-items: center; /* Centra el ícono verticalmente */
+    justify-content: center; /* Centra el ícono horizontalmente */
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
+    z-index: 10; /* Asegura que el botón esté encima de otros elementos */
 }
 
-/* Estilo para los botones dentro de la burbuja */
-.bubble button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    width: 100%; /* Hace que los botones ocupen todo el ancho de la burbuja */
-    height: 45%; /* Hace que los botones ocupen el 45% de la altura de la burbuja */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
-    transition: background-color 0.3s ease;
-    text-align: center; /* Centra el texto dentro del botón */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+/* Estilo al pasar el ratón por encima */
+.return-button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Efecto hover */
+    transform: translateX(5px); /* Desplazamiento suave */
 }
 
-/* Efecto al pasar el ratón sobre los botones */
-.bubble button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover para los botones */
+/* Ícono dentro del botón */
+.return-button i {
+    font-size: 30px; /* Tamaño del ícono */
+    transition: transform 0.3s ease; /* Transición del ícono */
 }
 
-/* Íconos dentro de los botones */
-.bubble button i {
-    font-size: 20px; /* Tamaño de los íconos */
-}
-
-/* Recorte para simular que está pegada al borde */
-.bubble::before {
-    content: ""; 
+/* Recorte en el borde para simular que está pegado */
+.return-button::before {
+    content: "";
     position: absolute;
-    left: -15px; /* Recorte en el borde izquierdo */
+    left: -15px; /* Ajusta la posición si es necesario */
     top: 50%;
-    transform: translateY(-50%); /* Centra el recorte verticalmente */
+    transform: translateY(-50%);
     width: 15px;
     height: 15px;
-    background-color: #416cc9; /* Igual al color de la burbuja */
+    background-color: #416cc9;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Cambios cuando la burbuja está contraída (sólo se ven los íconos) */
-.bubble.collapsed {
-    width: 50px; /* Solo 50px visible, mostrando solo los iconos */
-    height: 50px;
-    border-radius: 50%; /* Hace la burbuja completamente redonda */
-}
-
-/* Alineación de los íconos cuando la burbuja está contraída */
-.bubble.collapsed button i {
-    margin: 0; /* Elimina márgenes para que los íconos estén alineados al borde */
-    font-size: 25px; /* Ajusta el tamaño de los íconos */
-}
-
-/* Cambiar dirección de la flecha cuando la burbuja está contraída */
-.bubble.collapsed #toggleIcon {
-    transform: rotate(180deg); /* Rota la flecha */
-}
-
-/* Estilo para los botones cuando están en estado "expandido" */
-.bubble button#toggleBubble {
-    position: absolute;
-    bottom: 10px; /* Coloca la flecha en la parte inferior */
-    width: 100%;
-}
 
 /* Posición del texto "Descargar plantilla" */
 .top-right {
@@ -585,49 +543,67 @@ body, main {
 /* Fila de botones */
 .button-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    max-width: 800px;
-    padding: 15px;
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: space-between; /* Distribuye los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 900px; /* Ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 20px; /* Un poco más de espacio alrededor */
 }
 
+/* Contenedor de los botones */
 .button-group {
-    position: relative; /* Habilita la posición absoluta para el cuadro */
-    display: flex; /* Asegura que los botones y el select estén alineados correctamente */
-    align-items: center;
-    gap: 25px; /* Espacio entre la lista desplegable y los botones */
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
 }
 
-.select-wrapper {
-    position: relative;
-    display: inline-block; /* Asegura que los elementos se alineen correctamente */
+/* Estilo para la imagen */
+.button-row-image {
+    max-width: 100px; /* Tamaño ajustado de la imagen */
+    height: auto;
 }
 
-.select-wrapper select {
-    padding: 8px 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    width: 100%; /* Asegura un buen ajuste */
-}
+    /* Estilo para el select */
+    .select-wrapper select {
+        padding: 12px 18px;
+        border-radius: 8px;
+        border: 2px solid #030303;
+        font-size: 16px;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    }
 
-
+/* Estilo para los botones */
 .button-group .btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     background-color: #265cda;
     color: #fff;
-    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+/* Efecto al pasar el ratón sobre los botones */
 .button-group .btn:hover {
     background-color: #1b4ca7;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: translateY(-2px); /* Eleva ligeramente el botón */
 }
+
+/* Estilo para el botón de elegir archivo */
+.button-group .btn:first-child {
+    background-color: #6c7dff; /* Color diferente para elegir archivo */
+}
+
+.button-group .btn:first-child:hover {
+    background-color: #4f61bf; /* Hover para el botón de elegir archivo */
+}
+
 
 /* Tabla estilo Excel */
 .table-container {

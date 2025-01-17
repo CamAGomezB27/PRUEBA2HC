@@ -20,26 +20,26 @@
 
         <!-- Título de la página -->
         <main>
-            <div class="bubble" id="chatBubble">
-                <button id="goHomeButton">
-                    <i class="fas fa-home"></i> INICIO
-                </button>
-                <button id="toggleBubble">
-                    <i id="toggleIcon" class="fas fa-chevron-left"></i> <!-- Flecha inicial apuntando hacia la izquierda -->
-                </button>
+            <div class="return-button">
+                <i class="fas fa-home"></i> <!-- Ícono de la casa -->
             </div>
 
             <!-- Contenido principal -->
             <div class="content">
-                <!-- Lista desplegable con botones -->
-                <!-- Lista desplegable, botones y nueva imagen -->
+                <!-- Lista desplegable con botones e imagen -->
                 <div class="button-row">
-                    <select name="options" id="options">
-                        <option value="1">Novedad 1</option>
-                        <option value="2">Novedad 2</option>
-                        <option value="3">Novedad 3</option>
-                    </select>
-                    <img src="Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
+                    <div class="button-group">
+                        <div class="select-wrapper">
+                            <select name="options" id="options">
+                                <option value="" selected disabled>SELECCIONE SU NOVEDAD</option>
+                                <option value="1">3055 - SEGURO AUTOMOVIL</option>
+                                <option value="2">3322 - SEGURO SOAT</option>
+                                <option value="3">3107 - OTRAS DEDUCCIONES</option>
+                            </select>
+                        </div>
+                        <!-- Imagen al lado del botón "Cargar" -->
+                            <img src="Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
+                        </div>
                 </div>
 
                 <!-- Tabla tipo Excel -->
