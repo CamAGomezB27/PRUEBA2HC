@@ -19,19 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
         chatbotContainer.classList.remove('show');
     });
 
-    // Redirigir a otras páginas al hacer clic en los botones
-    if (ButtonMasivas) {
-        ButtonMasivas.addEventListener('click', function () {
-            window.location.href = "masivas.html";
-        });
-    }
-
-    if (ButtonPersonales) {
-        ButtonPersonales.addEventListener('click', function () {
-            window.location.href = "personales.html";
-        });
-    }
-
     if (ButtonPostnomina) {
         ButtonPostnomina.addEventListener('click', function () {
             window.location.href = "postnomina.html";
