@@ -21,7 +21,20 @@ body:not(.pagina-principal) {
     color: black; /* Texto en negro en otras páginas */
 }
 
-/* Formulario y contenedor */
+/* Asegura que la imagen se muestre correctamente sobre el formulario */
+.image-above-form {
+    text-align: center;
+    margin-bottom: 150px; /* Espacio entre la imagen y el formulario */
+}
+
+/* Ajustar el tamaño de la imagen */
+.Casa-image {
+    width: 100%; /* Ajustamos el ancho al 80% del contenedor */
+    max-width: 900px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen no se distorsione */
+}
+
 .container {
     max-width: 400px;
     background: linear-gradient(135deg, #62adf4, #62adf4);
@@ -31,6 +44,7 @@ body:not(.pagina-principal) {
     border-top: 8px solid #265cda;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    margin-top: -200px; /* Ajusta el valor según sea necesario */
 }
 
 .container:hover {
@@ -64,7 +78,7 @@ body:not(.pagina-principal) {
 
 /* Ajustamos la imagen para que no tome más espacio del necesario */
 .franco-image {
-    width: 100%; /* Hace que la imagen se ajuste al contenedor */
+    width: 82%; /* Hace que la imagen se ajuste al contenedor */
     height: auto; /* Mantiene la proporción */
     object-fit: contain; /* Asegura que la imagen no se deforme */
 }
