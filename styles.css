@@ -166,7 +166,7 @@ header::before {
     transform: translate(-50%, -50%); 
     width: 380px; 
     height: 250px; 
-    background-image: url('/Public/assets/CasaColaborador.png'); 
+    background-image: url('CasaColaborador.png'); 
     background-size: contain; 
     background-position: center; 
     z-index: 1; 
