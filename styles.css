@@ -830,7 +830,49 @@ body, main {
     overflow: hidden; /* Evita que los bordes redondeados se vean cortados */
 }
 
+/* Estilos generales para el mensaje emergente */
+.message {
+    position: fixed;
+    bottom: 100px; /* Mueve el mensaje más arriba de la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none; /* No puede ser clickeado mientras está animado */
+    transition: opacity 0.5s ease-out; /* Transición suave para desvanecerse */
+}
 
+/* Animación para el mensaje emergente */
+@keyframes slideUp {
+    0% {
+        bottom: -100px; /* Empieza fuera de la vista */
+        opacity: 0;
+    }
+    50% {
+        bottom: 20px; /* Llega a su posición final */
+        opacity: 1;
+    }
+    100% {
+        bottom: 20px; /* Mantiene la posición final */
+        opacity: 0;
+    }
+}
+
+/* Estilo para el mensaje de error */
+.error {
+    background-color: #f44336; /* Rojo */
+    border: 1px solid #d32f2f;
+}
+
+/* Estilo para el mensaje de éxito */
+.success {
+    background-color: #4caf50; /* Verde */
+    border: 1px solid #388e3c;
+}
 
 /* Estilos adicionales */
 @media (max-width: 768px) {
