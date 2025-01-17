@@ -8,87 +8,85 @@
     <!-- Agregar CDN de Font Awesome para usar íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-    <body>
-        <!-- Header fijo en la parte superior -->
-        <header>
-            <div class="header-content">    
-                <!-- Logo de usuario -->
-                <div class="logo-container">
-                    <img src="user.png" alt="Logo">
-                </div>
-            </header>
+<body>
+    <!-- Header fijo en la parte superior -->
+    <header class="header">
+        <div class="header-content">    
+            <!-- Logo de usuario -->
+            <div class="logo-container">
+                <img src="user.png" alt="Logo">
+            </div>
+        </div>
+    </header>
 
-        <!-- Título de la página -->
-        <main>
-            <div class="return-button">
-                <i class="fas fa-home"></i> <!-- Ícono de la casa -->
+    <!-- Título de la página -->
+    <main class="main-content">
+        <div class="return-button">
+            <i class="fas fa-home"></i> <!-- Ícono de la casa -->
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="content">
+            <!-- Lista desplegable con imagen -->
+            <div class="button-row">
+                <div class="select-wrapper">
+                    <select name="options" id="options">
+                        <option value="" selected disabled>SELECCIONE SU NOVEDAD</option>
+                        <option value="1">3058 - AFC DAVIVIENDA</option>
+                        <option value="2">3054 - AFC COLPATRIA</option>
+                        <option value="3">3050 - AFC BANCOLOMBIA</option>
+                    </select>
+                </div>
+                <!-- Imagen al lado del select -->
+                <img src="Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
             </div>
 
-            <!-- Contenido principal -->
-            <div class="content">
-                <!-- Lista desplegable con botones e imagen -->
-                <div class="button-row">
-                    <div class="button-group">
-                        <div class="select-wrapper">
-                            <select name="options" id="options">
-                                <option value="" selected disabled>SELECCIONE SU NOVEDAD</option>
-                                <option value="1">3055 - SEGURO AUTOMOVIL</option>
-                                <option value="2">3322 - SEGURO SOAT</option>
-                                <option value="3">3107 - OTRAS DEDUCCIONES</option>
-                            </select>
-                        </div>
-                        <!-- Imagen al lado del botón "Cargar" -->
-                            <img src="Franco_Okay 1.png" alt="Imagen descriptiva" class="button-row-image">
-                        </div>
-                </div>
+            <!-- Tabla tipo Excel -->
+            <div class="table-container">
+                <table class="excel-table">
+                    <thead>
+                        <tr>
+                            <th>CEDULA</th>
+                            <th>CONCEPTO</th>
+                            <th>VALOR</th>
+                            <th>UNIDADES</th>
+                            <th>FECHA</th>
+                            <th>PROCESO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Automatico</td><td>Automatico</td><td></td><td>Automatico</td><td>Automatico</td><td>Automatico</td></tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <!-- Tabla tipo Excel -->
-                <div class="table-container">
-                    <table class="excel-table">
-                        <thead>
-                            <tr>
-                                <th>CEDULA</th>
-                                <th>CONCEPTO</th>
-                                <th>VALOR</th>
-                                <th>UNIDADES</th>
-                                <th>FECHA</th>
-                                <th>PROCESO</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Botón debajo de la tabla -->
+            <!-- Botones debajo de la tabla -->
+            <div class="button-container">
                 <button class="btn">Subir Soporte pdf</button>
                 <button class="btn submit-btn">Guardar y Enviar</button>
-                
-            </div>
-
-        </main>
-
-        </main>
-
-        <div id="chatbot-button">
-            <span>💬</span> <!-- O el ícono que prefieras -->
-        </div>
-
-        <div id="chatbot-container">
-            <div id="chat-header">
-                <div class="logo-container">
-                    <img src="Franco_Pensando 1.png" alt="Logo">
-                </div>
-                <h3>Franco</h3>
-                <button id="close-chat">X</button>
-            </div>
-            <div id="chat-body">
-                <p class="bot">Hola, ¿en qué puedo ayudarte?</p>
-                <p class="user">Tengo una pregunta sobre los productos.</p>
             </div>
         </div>
+    </main>
 
-        <script src="script.js"></script>
-    </body>
+    <!-- Botón de chatbot flotante -->
+    <div id="chatbot-button">
+        <span>💬</span> <!-- O el ícono que prefieras -->
+    </div>
+
+    <div id="chatbot-container">
+        <div id="chat-header">
+            <div class="logo-container">
+                <img src="Franco_Pensando 1.png" alt="Logo">
+            </div>
+            <h3>Franco</h3>
+            <button id="close-chat">X</button>
+        </div>
+        <div id="chat-body">
+            <p class="bot">Hola, ¿en qué puedo ayudarte?</p>
+            <p class="user">Tengo una pregunta sobre los productos.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
